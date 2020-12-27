@@ -1,0 +1,55 @@
+#include <stdio.h>
+void citireVector(double v[], int size);
+void afisareVector(double v[], int size);
+void adunareVectori(double x[], double y[], double z[], int size);
+int main()
+{
+	int nr_tip, cantitate;
+	double v1[50],v2[50],v3[50],v4[50];
+
+	printf("Introduceti numarul de tipuri:");
+	scanf("%d",&nr_tip);
+	citireVector(v1,nr_tip);
+	
+	printf("Cantitate stock Trioda1:",cantitate);
+	scanf("%d",&cantitate);
+	citireVector(v2,cantitate);
+	
+	printf("Cantitate stock Trioda2:",cantitate);
+	scanf("%d",&cantitate);
+	citireVector(v3,cantitate);
+
+	adunareVectori(v2,v3,v4,cantitate);
+
+	afisareVector(v1,nr_tip);
+	afisareVector(v2,cantitate);
+	afisareVector(v3,cantitate);
+	afisareVector(v4,cantitate);
+	return 0;
+}
+void citireVector(double v[], int size)
+{
+	int i;
+	for(i=0;i<size;i++)
+		scanf("%lf",&v[i]);
+}
+void afisareVector(double v[], int size)
+{
+	int i;
+	printf("(");
+	for(i=0;i<size-1;i++)
+	{
+		printf("%g, ",v[i]);
+	}
+	printf("%g)\n",v[i]);
+}
+void adunareVectori( double x[], double y[],double z[], int size)
+{
+	int i;
+	for(i=0;i<size;i++)
+		{
+			z[i]=x[i]+y[i];
+		}
+	
+}
+
