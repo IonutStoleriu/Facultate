@@ -1,1 +1,25 @@
+#Fractii 
+#O fractie este ireductibila atunci cand numaratorul si numitorul au cmmdc = 1 sau cand numerele sunt prime intre ele.
+def cmmdc(a,b):
+    while(a!=b):
+        if(a>b): a=a-b
+        else: b=b-a
+    return a
+
+n=10
+i=0
+j=1
+total=0
+for number in range(n):
+    i=i+1
+    for number in range(n):
+        
+        c=cmmdc(i,j)
+        d=cmmdc(j,i)
+        if(c==1 and d==1):
+            #print(str(i)+"/"+str(j))
+            total+=1
+        j=j+1
+    j=1
+print("total="+str(total))
 
